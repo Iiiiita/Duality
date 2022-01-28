@@ -6,11 +6,18 @@ using UnityEngine.AI;
 public class NPC_Controller : MonoBehaviour
 {
     public Transform goal;
+    public GameObject[] goalArray;
+    public NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+        int luku = Random.Range(0, goalArray.Length);
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = goalArray[luku].transform.position;
+
+
     }
 
 
