@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    public NPC_Controller npcController;
+    //public NPC_Controller npcController;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class Goal : MonoBehaviour
     {
         if (other.gameObject.CompareTag("NPC"))
         {
+            NPC_Controller npcController = other.GetComponentInParent<NPC_Controller>();
             int luku = Random.Range(0, npcController.goalArray.Length);
             while (npcController.goalArray[luku].transform.position == gameObject.transform.position)
             {

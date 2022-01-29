@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class NPC_Controller : MonoBehaviour
 {
     public Transform goal;
     public GameObject[] goalArray;
     public NavMeshAgent agent;
+    public Transform player;
 
+    public NavMeshAgent[] agents;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +36,11 @@ public class NPC_Controller : MonoBehaviour
         {
             // stamina consumption++
             Destroy(other.gameObject);
+
+            foreach (NavMeshAgent agent in agents)
+            {
+                agent.destination = player.transform.position;
+            }
         }
     }
 }

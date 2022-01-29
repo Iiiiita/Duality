@@ -1,0 +1,171 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'fi' Physical Memory: 16310 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\unity\2020.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/iidee/Desktop/Duality
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+62447
+Successfully changed project path to: C:/Users/iidee/Desktop/Duality
+C:/Users/iidee/Desktop/Duality
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 20.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.8f1 (507919d4fff5)
+[Subsystems] Discovering subsystems at path C:/unity/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/iidee/Desktop/Duality/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
+    Vendor:   
+    VRAM:     5991 MB
+    Driver:   30.0.14.9649
+Initialize mono
+Mono path[0] = 'C:/unity/2020.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56668
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/unity/2020.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/unity/2020.3.8f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/unity/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002483 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 20.81 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.562 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000529 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.664 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1122 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.6 MB.
+System memory in use after: 70.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1585.
+Total: 1.405900 ms (FindLiveObjects: 0.131500 ms CreateObjectMapping: 0.024200 ms MarkObjects: 1.175300 ms  DeleteObjects: 0.073800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/New Material.mat
+  artifactKey: Guid(a5423f46d79289245b7c7be423331c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Material.mat using Guid(a5423f46d79289245b7c7be423331c6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f91a06aab6602df637648545e336b955') in 0.088976 seconds
+  Import took 0.090679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.918728 seconds.
+  path: Assets/JyriTemp
+  artifactKey: Guid(9adccea7397e1d04f9867f9f46851a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp using Guid(9adccea7397e1d04f9867f9f46851a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '550a6b3673817060e492d463b180ad38') in 0.001864 seconds
+  Import took 0.003657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007768 seconds.
+  path: Assets/JyriTemp
+  artifactKey: Guid(9adccea7397e1d04f9867f9f46851a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp using Guid(9adccea7397e1d04f9867f9f46851a5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '550a6b3673817060e492d463b180ad38') in 0.001645 seconds
+  Import took 0.003244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016873 seconds.
+  path: Assets/JyriTemp/DeadGroundOpaque.mat
+  artifactKey: Guid(2611d50e0d7b0e74da1f4b0cf5659530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp/DeadGroundOpaque.mat using Guid(2611d50e0d7b0e74da1f4b0cf5659530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ad2b1d7638c239d4b032aed95048c6') in 0.013560 seconds
+  Import took 0.015439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/JyriTemp/LivingGroundOpaque.mat
+  artifactKey: Guid(6384f26e20ea06d4c80821810c50613f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp/LivingGroundOpaque.mat using Guid(6384f26e20ea06d4c80821810c50613f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8c7952c17a2d4f70b02857a04ef81b8') in 0.012028 seconds
+  Import took 0.013765 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/JyriTemp/DeadGroundOpaque.mat
+  artifactKey: Guid(2611d50e0d7b0e74da1f4b0cf5659530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp/DeadGroundOpaque.mat using Guid(2611d50e0d7b0e74da1f4b0cf5659530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9ad2b1d7638c239d4b032aed95048c6') in 0.010982 seconds
+  Import took 0.012522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/JyriTemp/LivingGroundTransparent.mat
+  artifactKey: Guid(a6f0d81c81f39404989b692e8cd16920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp/LivingGroundTransparent.mat using Guid(a6f0d81c81f39404989b692e8cd16920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd41d7b318a46a733e8cd2b063cb2f03a') in 0.019997 seconds
+  Import took 0.021481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/JyriTemp/DeadGroundTransparent.mat
+  artifactKey: Guid(14e97291c6639054f9f5ab4c873e9e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JyriTemp/DeadGroundTransparent.mat using Guid(14e97291c6639054f9f5ab4c873e9e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7888ea26c364c6d919d6031773c06f39') in 0.018901 seconds
+  Import took 0.020364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.667567 seconds.
+  path: Assets/Scripts/MateRendererChange.cs
+  artifactKey: Guid(24f15c9e298b3de42b54b07b386da91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MateRendererChange.cs using Guid(24f15c9e298b3de42b54b07b386da91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae531768e896cf1348e59db8b2626b25') in 0.004657 seconds
+  Import took 0.006339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.020349 seconds.
+  path: Assets/Scripts/MateRendererChange.cs
+  artifactKey: Guid(24f15c9e298b3de42b54b07b386da91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MateRendererChange.cs using Guid(24f15c9e298b3de42b54b07b386da91d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae531768e896cf1348e59db8b2626b25') in 0.001579 seconds
+  Import took 0.002854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.295248 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(0ced400349b47b841b7af55998af637a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(0ced400349b47b841b7af55998af637a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a923679fa97ba453ed5c2958ee5a42') in 0.001875 seconds
+  Import took 0.003329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002638 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(0ced400349b47b841b7af55998af637a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(0ced400349b47b841b7af55998af637a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1a923679fa97ba453ed5c2958ee5a42') in 0.001460 seconds
+  Import took 0.002715 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
