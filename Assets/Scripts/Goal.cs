@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    //public NPC_Controller npcController;
-
     // Start is called before the first frame update
     void Start()
     {

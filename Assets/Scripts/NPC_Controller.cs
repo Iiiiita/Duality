@@ -8,12 +8,10 @@ public class NPC_Controller : MonoBehaviour
 {
     public Transform goal;
     public GameObject[] goalArray;
+    public NavMeshAgent[] agents;
     public NavMeshAgent agent;
     public Transform player;
 
-    public NavMeshAgent[] agents;
-
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +21,10 @@ public class NPC_Controller : MonoBehaviour
         agent.destination = goalArray[luku].transform.position;
     }
 
-
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnCollisionEnter(Collision other)
@@ -40,6 +37,16 @@ public class NPC_Controller : MonoBehaviour
             foreach (NavMeshAgent agent in agents)
             {
                 agent.destination = player.transform.position;
+
+                if(agent.transform.position != player.transform.position)
+                {
+
+                    agent.speed = 8;
+                }
+                if(agent.transform.position == player.transform.position)
+                {
+                    agent.speed = 0;
+                } 
             }
         }
     }
