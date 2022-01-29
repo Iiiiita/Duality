@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":2.9748260974884035,"y":0.9609980583190918,"z":-0.6107358932495117},"rotation":{"x":0.018131200224161149,"y":-0.904016375541687,"z":0.4253832995891571,"w":0.038542043417692187},"size":4.16149377822876,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-0.12049007415771485,"y":-0.5371594429016113,"z":-5.007762432098389},"rotation":{"x":-0.14326943457126618,"y":0.5999742150306702,"z":-0.11029941588640213,"w":-0.7793192267417908},"size":16.622581481933595,"orthographic":false}
+>>>>>>> IdanBranch
