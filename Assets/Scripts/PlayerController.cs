@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
 {
 
     public float movementSpeed = 5;
+    public float RotateSpeed = 50f;
     public float maxStamina = 10;
     public float staminaDrainSpeed = 1;
+    public float staminaDrainMultiplier = 1.2f;
     public float staminaGainSpeed = 1;
     public Interactions interactable;
 
@@ -30,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private bool isDrainCoRunning = false;
     private bool isGainCoRunning;
     private float currentStamina;
+    public bool isDetected = false;
 
     private bool hasDoorCollision;
     private bool hasPaperCollision;
@@ -51,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
 
         Moving();
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isInLiving)
             {
@@ -60,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
                 isDrainCoRunning = false;
                 isGainCoRunning = true;
+                isDetected = false;
 
                 Debug.Log("About to stop drain");
                 StopCoroutine(DrainStaminaCo);
@@ -76,11 +80,11 @@ public class PlayerController : MonoBehaviour
                 isGainCoRunning = false;
 
                 StopCoroutine(GainStaminaCo);
-                DrainStaminaCo = StartCoroutine(DrainStamina());
+                DrainStaminaCo = StartCoroutine(DrainStamina(staminaDrainSpeed));
 
             }
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             //Tarkista tagi, kutsu sen mukaista funktiota, asuvat interactable
             if (hasDoorCollision)
@@ -92,21 +96,22 @@ public class PlayerController : MonoBehaviour
             {
                 interactable.PaperInteraction();
             }
-            
+
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
+    //    private void OnCollisionStay(UnityEngine.Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("OfficeDoor"))
+        Debug.Log("Kohtaamisia");
+        if (other.gameObject.CompareTag("OfficeDoor"))
         {
             //Kun kolaroidaan oveen
             Debug.Log("You enter doors sphere of influence...");
             hasDoorCollision = true;
-            
-            
+
+
         }
-        if (collision.gameObject.CompareTag("WillPaper"))
+        if (other.gameObject.CompareTag("WillPaper"))
         {
             // Kun kolaroidaan testamenttiin.
             Debug.Log("You enter papers sphere of influence...");
@@ -114,21 +119,32 @@ public class PlayerController : MonoBehaviour
             hasPaperCollision = true;
 
         }
+        if (other.gameObject.CompareTag("Human"))
+        {
+            isDetected = true;
+
+        }
     }
-    private void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "OfficeDoor")
+        if (other.gameObject.tag == "OfficeDoor")
         {
             //Kun poistutaan ovelta
             Debug.Log("You leave doors sphere of influence...");
             hasDoorCollision = false;
 
         }
-        if (collision.gameObject.tag == "WillPaper")
+        if (other.gameObject.tag == "WillPaper")
         {
             // Kun poistutaan testamentiltä.
             Debug.Log("You leave papers sphere of influence...");
             hasPaperCollision = false;
+
+        }
+        if (other.gameObject.CompareTag("Human"))
+        {
+            isDetected = false;
 
         }
     }
@@ -293,15 +309,26 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(Vector3.right * Time.deltaTime * movementSpeed);
         }
+
+        if (Input.GetKey(KeyCode.Q))
+            transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
+        else if (Input.GetKey(KeyCode.E))
+            transform.Rotate(Vector3.up * RotateSpeed * Time.deltaTime);
+
     }
-    IEnumerator DrainStamina()
+    IEnumerator DrainStamina(float drainSpd)
     {
 
         while (currentStamina > 0)
         {
             if (isDrainCoRunning)
             {
-                currentStamina = currentStamina - (staminaDrainSpeed * Time.deltaTime);
+                //If detected, kertoimella, else
+                if (isDetected)
+                {
+                    drainSpd = drainSpd * staminaDrainMultiplier;
+                }
+                currentStamina = currentStamina - (drainSpd * Time.deltaTime);
 
                 if (currentStamina <= 0)
                 {
