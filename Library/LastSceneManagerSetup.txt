@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< Updated upstream
-- path: Assets/Scenes/JennaScene.unity
-=======
-- path: Assets/Scenes/JyriScene.unity
->>>>>>> Stashed changes
+- path: Assets/Scenes/CityLevel.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
