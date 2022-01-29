@@ -15,12 +15,12 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        npcController.agent.destination = npcController.goal.transform.position;
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        /*if (other.gameObject.CompareTag("NPC"))
+        if (other.gameObject.CompareTag("NPC"))
         {
             int luku = Random.Range(0, npcController.goalArray.Length);
             while (npcController.goalArray[luku].transform.position == gameObject.transform.position)
@@ -28,6 +28,6 @@ public class Goal : MonoBehaviour
                 luku = Random.Range(0, npcController.goalArray.Length);
             }
             npcController.agent.destination = npcController.goalArray[luku].transform.position;
-        }*/
+        }
     }
 }

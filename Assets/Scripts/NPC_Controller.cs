@@ -16,8 +16,6 @@ public class NPC_Controller : MonoBehaviour
 
         agent = GetComponent<NavMeshAgent>();
         agent.destination = goalArray[luku].transform.position;
-
-
     }
 
 
