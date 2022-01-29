@@ -1,16 +1,25 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
+<<<<<<< Updated upstream
 OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'fi' Physical Memory: 16310 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
 C:\unity\2020.3.8f1\Editor\Unity.exe
+=======
+OS: 'Windows 10 Home; OS build 19043.1466; Version 2009; 64bit' Language: 'fi' Physical Memory: 16293 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+D:\Unity\2020.3.8f1\Editor\Unity.exe
+>>>>>>> Stashed changes
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
+<<<<<<< Updated upstream
 C:/Users/iidee/Desktop/Duality
 -logFile
 Logs/AssetImportWorker0.log
@@ -60,17 +69,67 @@ Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.688 seconds
+=======
+D:/KOULU/FGJ/Duality
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61885
+Successfully changed project path to: D:/KOULU/FGJ/Duality
+D:/KOULU/FGJ/Duality
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 18.12 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.8f1 (507919d4fff5)
+[Subsystems] Discovering subsystems at path D:/Unity/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/KOULU/FGJ/Duality/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2080 (ID=0x1e87)
+    Vendor:   
+    VRAM:     8010 MB
+    Driver:   30.0.15.1123
+Initialize mono
+Mono path[0] = 'D:/Unity/2020.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56548
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001125 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 18.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.987 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000676 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.677 seconds
+>>>>>>> Stashed changes
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+=======
+Refreshing native plugins compatible for Editor in 0.16 ms, found 0 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1123 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 70.5 MB.
 System memory in use after: 70.5 MB.
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1586.
+<<<<<<< Updated upstream
 Total: 1.652800 ms (FindLiveObjects: 0.126800 ms CreateObjectMapping: 0.023800 ms MarkObjects: 1.379300 ms  DeleteObjects: 0.121800 ms)
 
 ========================================================================
@@ -503,6 +562,280 @@ System memory in use after: 87.5 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1636.
 Total: 1.346900 ms (FindLiveObjects: 0.128000 ms CreateObjectMapping: 0.024000 ms MarkObjects: 1.139800 ms  DeleteObjects: 0.054500 ms)
+=======
+Total: 1.431600 ms (FindLiveObjects: 0.107500 ms CreateObjectMapping: 0.022800 ms MarkObjects: 1.226900 ms  DeleteObjects: 0.073300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/JennaScene.unity
+  artifactKey: Guid(24f1550714260794cada472755f805d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JennaScene.unity using Guid(24f1550714260794cada472755f805d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44a9a9e83285292ea69968fd697cd105') in 0.013083 seconds
+  Import took 0.014478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.064787 seconds.
+  path: Assets/Scenes/JennaScene 1.unity
+  artifactKey: Guid(0c95c3ebd88124a40a3caa685f5e0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JennaScene 1.unity using Guid(0c95c3ebd88124a40a3caa685f5e0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98416f8e88b09887e9a6fc7001e4bd57') in 0.005155 seconds
+  Import took 0.006593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005017 seconds.
+  path: Assets/Scenes/JennaScene 1.unity
+  artifactKey: Guid(0c95c3ebd88124a40a3caa685f5e0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/JennaScene 1.unity using Guid(0c95c3ebd88124a40a3caa685f5e0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98416f8e88b09887e9a6fc7001e4bd57') in 0.001777 seconds
+  Import took 0.003355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.396410 seconds.
+  path: Assets/Scenes/DualityTest.unity
+  artifactKey: Guid(0c95c3ebd88124a40a3caa685f5e0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/DualityTest.unity using Guid(0c95c3ebd88124a40a3caa685f5e0fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211aeefa021f6b368e7a3dc10acaf0e4') in 0.004851 seconds
+  Import took 0.006242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 409.124214 seconds.
+  path: Assets/City_assets/car01.fbx
+  artifactKey: Guid(456dd5002b12e6f418264e092add8aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/car01.fbx using Guid(456dd5002b12e6f418264e092add8aca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8205c5bb92d2f7eade3ae69dbc70097d') in 0.139303 seconds
+  Import took 0.141048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/City_assets/house_tall.fbx
+  artifactKey: Guid(d4c5a8b143ca4dd478941e00599485e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall.fbx using Guid(d4c5a8b143ca4dd478941e00599485e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5284f010304c525f999a1007559effc') in 0.021600 seconds
+  Import took 0.023034 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/City_assets/tree.fbx
+  artifactKey: Guid(8505a85fc6f572b4696dbc90cd567851) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/tree.fbx using Guid(8505a85fc6f572b4696dbc90cd567851) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3af84499797ba1c3ca792fe33db240ca') in 0.020269 seconds
+  Import took 0.022416 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/City_assets/house_entrance_U001.fbx
+  artifactKey: Guid(d41db2b995cf1ef41a20ba264dc4591e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_entrance_U001.fbx using Guid(d41db2b995cf1ef41a20ba264dc4591e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4d535355d696b14edf3b89342e89f8') in 0.024043 seconds
+  Import took 0.025719 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/City_assets/trash.fbx
+  artifactKey: Guid(9ba85c353fe0e584bb11b2ed888c19f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/trash.fbx using Guid(9ba85c353fe0e584bb11b2ed888c19f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69216330820fb1c109a4c90c62b8f2f6') in 0.015197 seconds
+  Import took 0.016694 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/City_assets/pot.fbx
+  artifactKey: Guid(cf455aef1cfbf1a419668ccede9ab946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/pot.fbx using Guid(cf455aef1cfbf1a419668ccede9ab946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '069ff66ea393981c8de7b0cf7f83e15c') in 0.014140 seconds
+  Import took 0.015513 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/City_assets/house_tall_U.fbx
+  artifactKey: Guid(72a39facb0b6b3e459b438f08e092e49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall_U.fbx using Guid(72a39facb0b6b3e459b438f08e092e49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c6a8e00d4c8c0ab8527563a16c770d') in 0.022451 seconds
+  Import took 0.023859 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/City_assets/house_tall_wide_U001.fbx
+  artifactKey: Guid(8661e769e89bacf4cae85c42444e3bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall_wide_U001.fbx using Guid(8661e769e89bacf4cae85c42444e3bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b2107579f773223086b5b1c7e2fd02') in 0.020926 seconds
+  Import took 0.022370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/City_assets/car02.fbx
+  artifactKey: Guid(12ab58d06badd564fa0364f0adb9aa72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/car02.fbx using Guid(12ab58d06badd564fa0364f0adb9aa72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35ca43a1cfa2d250e35aa880b9c0b10a') in 0.025643 seconds
+  Import took 0.027096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/City_assets/street001.fbx
+  artifactKey: Guid(23d639a65315cb042b8a9da6448db4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/street001.fbx using Guid(23d639a65315cb042b8a9da6448db4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b6029cc6a77a8ee15ec0f825fe74f30') in 0.016613 seconds
+  Import took 0.018244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/City_assets/tree002.fbx
+  artifactKey: Guid(f6e574edd13d95d47b050570ead85e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/tree002.fbx using Guid(f6e574edd13d95d47b050570ead85e8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1af5810368bcf7cebea70c8d72c9f2e4') in 0.016249 seconds
+  Import took 0.017822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/City_assets/street002.fbx
+  artifactKey: Guid(a7704534dbb921345a604879e86e9f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/street002.fbx using Guid(a7704534dbb921345a604879e86e9f2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '632b7090b4d6b8b7a819af10c346fc66') in 0.016275 seconds
+  Import took 0.017617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/City_assets/tree003.fbx
+  artifactKey: Guid(e91636cfc64745043ba3c0f2fc51ed1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/tree003.fbx using Guid(e91636cfc64745043ba3c0f2fc51ed1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7307d98f607e09282f11dbe0de71628') in 0.015038 seconds
+  Import took 0.016660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/City_assets/house_short_U.fbx
+  artifactKey: Guid(d5d6f922e4cad1041964aacd442a6516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_short_U.fbx using Guid(d5d6f922e4cad1041964aacd442a6516) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30aa77b31bfd26f65e97cb5ba2a903f5') in 0.022183 seconds
+  Import took 0.023726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/City_assets/house_short.fbx
+  artifactKey: Guid(5ca671d475cb7bc44a36a9a39103e28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_short.fbx using Guid(5ca671d475cb7bc44a36a9a39103e28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '420bfbd4637cc2e7de2ba99a090616b3') in 0.021776 seconds
+  Import took 0.023278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/City_assets/house_tall002.fbx
+  artifactKey: Guid(d85b804fa69f1c540b3712f6df7b9726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall002.fbx using Guid(d85b804fa69f1c540b3712f6df7b9726) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a62a5d03a0e10ca43656eac7864ce4') in 0.021576 seconds
+  Import took 0.023151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/City_assets/tree001.fbx
+  artifactKey: Guid(993ab96410920134ab0887e6cd82ebfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/tree001.fbx using Guid(993ab96410920134ab0887e6cd82ebfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88fe75944f6587cfbc7a2406414824bd') in 0.013138 seconds
+  Import took 0.014794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/City_assets/tree004.fbx
+  artifactKey: Guid(8e85f1b3b2a0f8b439cb5c60fd80a1ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/tree004.fbx using Guid(8e85f1b3b2a0f8b439cb5c60fd80a1ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f825e3048dbda8b804efd5353a4a03c') in 0.015463 seconds
+  Import took 0.017151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/City_assets/house_wide_short002.fbx
+  artifactKey: Guid(dbb7676ce5614c349abe17b404d1751d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_wide_short002.fbx using Guid(dbb7676ce5614c349abe17b404d1751d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a76db26b7ae8a6505e2bbcc9f467326') in 0.021028 seconds
+  Import took 0.022473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000296 seconds.
+  path: Assets/City_assets/house_short_wide_U.fbx
+  artifactKey: Guid(a6061989e17444449bc5fa84d781cfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_short_wide_U.fbx using Guid(a6061989e17444449bc5fa84d781cfc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41cca9c2d1d67d590368059e9f768691') in 0.020918 seconds
+  Import took 0.022503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/City_assets/house_tall_wide001.fbx
+  artifactKey: Guid(43b08a2797262f24f86355f457ec11d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall_wide001.fbx using Guid(43b08a2797262f24f86355f457ec11d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb85fd453aa9802dee9a14e131eac5f3') in 0.020348 seconds
+  Import took 0.021833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/City_assets/car03.fbx
+  artifactKey: Guid(e46ee604914c4f14e9c3b0bb438a6baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/car03.fbx using Guid(e46ee604914c4f14e9c3b0bb438a6baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e652ad412899930a8c916b32dbdad0f5') in 0.026730 seconds
+  Import took 0.028151 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/City_assets/street003.fbx
+  artifactKey: Guid(ce447b001b5ccba4f87206807f861148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/street003.fbx using Guid(ce447b001b5ccba4f87206807f861148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b3b524116db78a0a0e40ee96c69e26a') in 0.015599 seconds
+  Import took 0.017160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/City_assets/house_wide_short001.fbx
+  artifactKey: Guid(fa87107c8aae3f84ca098d9922bbf8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_wide_short001.fbx using Guid(fa87107c8aae3f84ca098d9922bbf8af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5c2ce807e3fe3551701ca699856857b') in 0.020765 seconds
+  Import took 0.022412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/City_assets/car04.fbx
+  artifactKey: Guid(8c63f6d31ab2f9d4d841302faebb2c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/car04.fbx using Guid(8c63f6d31ab2f9d4d841302faebb2c29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03659a3f0f95b67cfed40fab12401c44') in 0.034076 seconds
+  Import took 0.035575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/City_assets/house_entrance002.fbx
+  artifactKey: Guid(1633e1400fa3c5844ba3d775bd4fd37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_entrance002.fbx using Guid(1633e1400fa3c5844ba3d775bd4fd37d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd95505cf2bf4ac7ee71db754eea670fd') in 0.020943 seconds
+  Import took 0.022679 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/City_assets/house_tall_U001.fbx
+  artifactKey: Guid(457efdd8415ad3f40b597c00a28b7787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall_U001.fbx using Guid(457efdd8415ad3f40b597c00a28b7787) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a050ff6434d88d9f138ce2a0336e345') in 0.020112 seconds
+  Import took 0.021590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/City_assets/house_tall001.fbx
+  artifactKey: Guid(bb34a661a0c7fe74ba685db6c8a3390e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_tall001.fbx using Guid(bb34a661a0c7fe74ba685db6c8a3390e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e57abf7a18ec0741b8e78dae7bc81380') in 0.021271 seconds
+  Import took 0.022749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/City_assets/lamp.fbx
+  artifactKey: Guid(1d2f219f01fcf78418b1eee57a9ea738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/lamp.fbx using Guid(1d2f219f01fcf78418b1eee57a9ea738) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12753ee000e236665ceb012ea415138') in 0.014731 seconds
+  Import took 0.016375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/City_assets/house_entrance001.fbx
+  artifactKey: Guid(562a2b5c0747ce341be036513bb6fefa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/City_assets/house_entrance001.fbx using Guid(562a2b5c0747ce341be036513bb6fefa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '904a04d713c0135d4198d8a922d965bb') in 0.020234 seconds
+  Import took 0.021717 seconds .
+>>>>>>> Stashed changes
 
 ========================================================================
 Received Prepare
@@ -515,10 +848,15 @@ Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Completed reload, in  0.674 seconds
+=======
+- Completed reload, in  0.651 seconds
+>>>>>>> Stashed changes
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+<<<<<<< Updated upstream
 Unloading 1118 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 87.4 MB.
 System memory in use after: 87.5 MB.
@@ -937,5 +1275,13 @@ System memory in use after: 87.8 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1679.
 Total: 1.659600 ms (FindLiveObjects: 0.158700 ms CreateObjectMapping: 0.026000 ms MarkObjects: 1.352700 ms  DeleteObjects: 0.120600 ms)
+=======
+Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.0 MB.
+System memory in use after: 74.1 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1633.
+Total: 1.209500 ms (FindLiveObjects: 0.097400 ms CreateObjectMapping: 0.024600 ms MarkObjects: 1.031900 ms  DeleteObjects: 0.055000 ms)
+>>>>>>> Stashed changes
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
