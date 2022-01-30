@@ -74,6 +74,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -160,6 +162,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 245
       Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
     Assets/Scenes/MainMenu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -234,6 +238,8 @@ ScriptsOnlyBuild:
     - Class: 243
       Script: {instanceID: 0}
     - Class: 245
+      Script: {instanceID: 0}
+    - Class: 258
       Script: {instanceID: 0}
     Assets/Scenes/Office_level.unity:
     - Class: 1
@@ -873,7 +879,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: e72ce0c8a9c87e79d3bceced6fa38424
+      Hash: eb5a6c5e84eed15a2fd83b5e6093988d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPC_Controller
@@ -1137,7 +1143,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 483ae03f3c9f26c607e892067b848f20
+      Hash: c912e624eb186c5c6d3ae3c8d012d27c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1224,4 +1230,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/CityLevel.unity
   - Assets/Scenes/Office_level.unity
-  playerPath: D:/KOULU/FGJ/Builds/00/Duality.exe
+  playerPath: C:/Users/iidee/Desktop/Uusi kansio/release/Duality.exe

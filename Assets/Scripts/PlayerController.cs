@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -24,8 +25,6 @@ public class PlayerController : MonoBehaviour
     public Material DeadOpaqueMat;
     public Material LivingTransparentMat;
     public Material DeadTransparentMat;
-    // public GameObject LivingGround;
-    //  public GameObject DeadGround;
 
     private bool isInLiving;
     private Coroutine DrainStaminaCo;
@@ -43,8 +42,9 @@ public class PlayerController : MonoBehaviour
     private List<GameObject> polices = new List<GameObject>();
     public GameObject PoliceParent;
 
-    
-
+    public Text willText;
+    public Text doorText;
+    //public GameObject will;
     // public GameObject lolxd;
 
     // Start is called before the first frame update
@@ -64,8 +64,6 @@ public class PlayerController : MonoBehaviour
             polices.Add(Child.gameObject);
 
         }
-
-        
     }
 
     // Update is called once per frame
@@ -122,6 +120,8 @@ public class PlayerController : MonoBehaviour
                // interactable.PaperInteraction();
                 hasDestroyedTestament = true;
                 Debug.Log("You interact with the paper, Has destroyed papers? " + hasDestroyedTestament);
+                willText.text = "Some smoke arises...";
+                
             }
 
         }
@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
             //Kun kolaroidaan oveen
             Debug.Log("You enter doors sphere of influence...");
             hasDoorCollision = true;
+            doorText.gameObject.SetActive(true);
 
 
         }
@@ -148,7 +149,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("You enter papers sphere of influence...");
 
             hasPaperCollision = true;
-
+            willText.gameObject.SetActive(true);
         }
         if (other.gameObject.CompareTag("Human"))
         {
@@ -170,6 +171,7 @@ public class PlayerController : MonoBehaviour
             //Kun poistutaan ovelta
             Debug.Log("You leave doors sphere of influence...");
             hasDoorCollision = false;
+            doorText.gameObject.SetActive(false);
 
         }
         if (other.gameObject.tag == "WillPaper")
@@ -177,6 +179,7 @@ public class PlayerController : MonoBehaviour
             // Kun poistutaan testamentiltä.
             Debug.Log("You leave papers sphere of influence...");
             hasPaperCollision = false;
+            willText.gameObject.SetActive(false);
 
         }
         if (other.gameObject.CompareTag("Human"))
