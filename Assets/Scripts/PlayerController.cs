@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
     private List<GameObject> polices = new List<GameObject>();
     public GameObject PoliceParent;
 
+    
+
     // public GameObject lolxd;
 
     // Start is called before the first frame update
@@ -62,6 +64,8 @@ public class PlayerController : MonoBehaviour
             polices.Add(Child.gameObject);
 
         }
+
+        
     }
 
     // Update is called once per frame
@@ -150,6 +154,7 @@ public class PlayerController : MonoBehaviour
         {
 
             Debug.Log("Player Detected!");
+            
             isDetected = true;
             isRecentlyDetected = true;
             // lolxd.GetComponent<NPC_Controller>().PlayerDetection();

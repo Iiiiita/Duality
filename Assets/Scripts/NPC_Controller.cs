@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
+using UnityEngine.Audio;
 
 public class NPC_Controller : MonoBehaviour
 {
@@ -15,10 +16,15 @@ public class NPC_Controller : MonoBehaviour
     public GameObject playerGO;
     private bool isRecentlyRandomised = false;
 
+    AudioSource audioSource;
+    public AudioClip screamSound;
+
     // Start is called before the first frame update
     void Start()
     {
         PosRandomisation();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PosRandomisation()
@@ -40,6 +46,7 @@ public class NPC_Controller : MonoBehaviour
         }
         if (playerGO.GetComponent<PlayerController>().isDetected == true && playerGO.GetComponent<PlayerController>().isRecentlyDetected == true)
         {
+            audioSource.Pause();
             PlayerDetection();
             playerGO.GetComponent<PlayerController>().isRecentlyDetected = false;
         }
@@ -62,6 +69,12 @@ public class NPC_Controller : MonoBehaviour
 
         //Destroy(other.gameObject);
 
+        /*if (playerGO.GetComponent<PlayerController>().isRecentlyDetected == true)
+        {
+            
+        }*/
+       /* else
+            audioSource.UnPause();*/
 
       foreach (NavMeshAgent agent in agents)
      {
@@ -78,7 +91,7 @@ public class NPC_Controller : MonoBehaviour
             currentDistanceToPlayer = Vector3.Distance(playerPos.position, agent.transform.position);
             if (currentDistanceToPlayer >= goalDistanceToPlayer)
             {
-
+                audioSource.PlayOneShot(screamSound);
                 agent.speed = 8;
                 Debug.Log("Speedin'");
             }
@@ -86,6 +99,7 @@ public class NPC_Controller : MonoBehaviour
             {
                 agent.speed = 3.5f;
                 Debug.Log("On the Spot");
+                
                 isRecentlyRandomised = false;
                 PosRandomisation();
             }

@@ -9606,6 +9606,7 @@ MonoBehaviour:
   agent: {fileID: 376736588}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &376736588
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10599,6 +10600,7 @@ MonoBehaviour:
   agent: {fileID: 404419924}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &404419924
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12824,6 +12826,7 @@ MonoBehaviour:
   agent: {fileID: 470513176}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!95 &470513178
 Animator:
   serializedVersion: 3
@@ -15811,6 +15814,7 @@ MonoBehaviour:
   agent: {fileID: 570075308}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &570075308
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16561,6 +16565,7 @@ MonoBehaviour:
   agent: {fileID: 589947438}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &589947438
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18798,6 +18803,7 @@ MonoBehaviour:
   agent: {fileID: 667844175}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!95 &667844178
 Animator:
   serializedVersion: 3
@@ -19047,6 +19053,7 @@ MonoBehaviour:
   agent: {fileID: 672304449}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &672304449
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19320,6 +19327,7 @@ MonoBehaviour:
   agent: {fileID: 674081004}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &674081004
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23952,6 +23960,7 @@ MonoBehaviour:
   agent: {fileID: 870812134}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &870812134
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27364,6 +27373,7 @@ MonoBehaviour:
   agent: {fileID: 963243158}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &963243158
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27946,6 +27956,7 @@ MonoBehaviour:
   agent: {fileID: 973441165}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!65 &973441167
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30479,6 +30490,7 @@ GameObject:
   - component: {fileID: 1096793612}
   - component: {fileID: 1096793611}
   - component: {fileID: 1096793610}
+  - component: {fileID: 1096793613}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30548,6 +30560,7 @@ MonoBehaviour:
   isDetected: 0
   isRecentlyDetected: 0
   PoliceParent: {fileID: 1265590066}
+  screamSound: {fileID: 8300000, guid: bc0033dce6e566244a995030a0ef7407, type: 3}
   hasDestroyedTestament: 0
 --- !u!65 &1096793612
 BoxCollider:
@@ -30562,6 +30575,102 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1096793613
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096793608}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6ad930330198fcb40a139b20ad3793a7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1104459326 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1d2f219f01fcf78418b1eee57a9ea738, type: 3}
@@ -30849,6 +30958,7 @@ MonoBehaviour:
   agent: {fileID: 1113699362}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1113699362
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -32034,6 +32144,7 @@ MonoBehaviour:
   agent: {fileID: 1139993124}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1139993124
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35008,6 +35119,7 @@ MonoBehaviour:
   agent: {fileID: 1222338016}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1222338016
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -36957,6 +37069,7 @@ MonoBehaviour:
   agent: {fileID: 1283328900}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1283328900
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -37539,6 +37652,7 @@ MonoBehaviour:
   agent: {fileID: 1300020622}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1300020622
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -38357,6 +38471,7 @@ MonoBehaviour:
   agent: {fileID: 1320205911}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1320205911
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -41549,6 +41664,7 @@ MonoBehaviour:
   agent: {fileID: 1434284589}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!65 &1434284591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43119,6 +43235,7 @@ MonoBehaviour:
   agent: {fileID: 1480518502}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1480518502
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -45046,6 +45163,7 @@ MonoBehaviour:
   agent: {fileID: 1530169971}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1530169971
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -48958,6 +49076,7 @@ MonoBehaviour:
   agent: {fileID: 1690289607}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!95 &1690289610
 Animator:
   serializedVersion: 3
@@ -53813,6 +53932,7 @@ MonoBehaviour:
   agent: {fileID: 1888110509}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1888110509
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -55053,6 +55173,7 @@ MonoBehaviour:
   agent: {fileID: 1925395332}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1925395332
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -56479,6 +56600,7 @@ MonoBehaviour:
   agent: {fileID: 1975420410}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &1975420410
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -60851,6 +60973,7 @@ MonoBehaviour:
   agent: {fileID: 2085418783}
   playerPos: {fileID: 1096793609}
   playerGO: {fileID: 1096793608}
+  screamSound: {fileID: 0}
 --- !u!195 &2085418783
 NavMeshAgent:
   m_ObjectHideFlags: 0
