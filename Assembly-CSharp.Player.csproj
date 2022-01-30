@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\MateRendererChange.cs" />
     <Compile Include="Assets\Scripts\VolumeSettings.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\CameraSway.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\ReplaceSelected\Readme.txt" />
