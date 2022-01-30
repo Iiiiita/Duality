@@ -10,12 +10,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         gameOverPanel.SetActive(false);
-        victoryPanel.SetActive(true);
+        if (victoryPanel != null)
+        { victoryPanel.SetActive(false); }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

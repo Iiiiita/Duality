@@ -11,6 +11,7 @@ public class GrimReaperController : MonoBehaviour
     public GameManager gameManager;
     public AudioClip gameOverSound;
     AudioSource audioSource;
+    public PlayerController playerController;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,17 @@ public class GrimReaperController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         audioSource = GetComponent<AudioSource>();
+        
     }
-
+    private bool winnable = false;
     // Update is called once per frame
     void Update()
     {
         agent.destination = player.transform.position;
+        if (playerController.hasDestroyedTestament == true)
+        {
+            winnable = true;
+        }
     }
 
     public void OnCollisionEnter(Collision other)
@@ -32,9 +38,19 @@ public class GrimReaperController : MonoBehaviour
         {
             // lose game
             // Destroy(other.gameObject);
-            audioSource.PlayOneShot(gameOverSound); 
-            gameManager.gameOverPanel.SetActive(true);
-            
+            if (winnable == true)
+            {
+                gameManager.victoryPanel.SetActive(true);
+            }
+            else if (winnable == false)
+            {
+                Debug.Log("You interact with the paper, Has destroyed papers? " + winnable);
+                audioSource.PlayOneShot(gameOverSound);
+                gameManager.gameOverPanel.SetActive(true);
+            }
+            else
+                Debug.Log("Lol ei toimi xd");
+
         }
     }
 }

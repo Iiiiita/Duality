@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private bool hasDoorCollision;
     private bool hasPaperCollision;
+
 
     private List<GameObject> polices = new List<GameObject>();
     public GameObject PoliceParent;
@@ -106,17 +108,22 @@ public class PlayerController : MonoBehaviour
             //Tarkista tagi, kutsu sen mukaista funktiota, asuvat interactable
             if (hasDoorCollision)
             {
-                interactable.DoorInteraction();
+                // interactable.DoorInteraction();
+                Debug.Log("You interact with the door");
+                SceneManager.LoadScene(2);
             }
 
             if (hasPaperCollision)
             {
-                interactable.PaperInteraction();
+               // interactable.PaperInteraction();
+                hasDestroyedTestament = true;
+                Debug.Log("You interact with the paper, Has destroyed papers? " + hasDestroyedTestament);
             }
 
         }
     }
 
+    public bool hasDestroyedTestament;
 
     //    private void OnCollisionStay(UnityEngine.Collision other)
     void OnTriggerEnter(Collider other)
