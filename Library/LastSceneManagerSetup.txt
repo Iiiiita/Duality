@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Office_level.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/Scenes/CityLevel.unity
+=======
+- path: Assets/Scenes/DualityTest.unity
+>>>>>>> Stashed changes
+>>>>>>> 433eaffceaf2782d2d17af8909ae7ba0720ee722
   isLoaded: 1
   isActive: 1
   isSubScene: 0

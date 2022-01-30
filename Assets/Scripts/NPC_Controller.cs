@@ -12,6 +12,8 @@ public class NPC_Controller : MonoBehaviour
     public NavMeshAgent agent;
     public Transform player;
 
+    public GameObject playerGO;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,30 +26,43 @@ public class NPC_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if (playerGO.GetComponent<PlayerController>().isDetected == true)
         {
-            // stamina consumption++
-            Destroy(other.gameObject);
-
-            foreach (NavMeshAgent agent in agents)
-            {
-                agent.destination = player.transform.position;
-
-                if(agent.transform.position != player.transform.position)
-                {
-
-                    agent.speed = 8;
-                }
-                if(agent.transform.position == player.transform.position)
-                {
-                    agent.speed = 0;
-                } 
-            }
+            PlayerDetection();
         }
     }
+
+    void PlayerDetection()
+    {
+
+
+        //if (other.gameObject.CompareTag("Player"))
+        //{
+
+        // stamina consumption++
+        //playerGO.GetComponent<PlayerController>().isDetected = true;
+        //Debug.Log("Player Detected!");
+
+        //Destroy(other.gameObject);
+
+           foreach (NavMeshAgent agent in agents)
+           {
+               agent.destination = player.transform.position;
+
+               if (agent.transform.position != player.transform.position)
+               {
+
+                   agent.speed = 8;
+               }
+               if (agent.transform.position == player.transform.position)
+               {
+                   agent.speed = 0;
+               }
+
+
+
+           }
+
+    }
+
 }
