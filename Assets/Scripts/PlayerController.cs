@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour
     public Material DeadOpaqueMat;
     public Material LivingTransparentMat;
     public Material DeadTransparentMat;
-    public GameObject LivingGround;
-    public GameObject DeadGround;
+    // public GameObject LivingGround;
+    //  public GameObject DeadGround;
 
     private bool isInLiving;
     private Coroutine DrainStaminaCo;
@@ -33,20 +33,33 @@ public class PlayerController : MonoBehaviour
     private bool isGainCoRunning;
     private float currentStamina;
     public bool isDetected = false;
+    public bool isRecentlyDetected = false;
 
     private bool hasDoorCollision;
     private bool hasPaperCollision;
 
+    private List<GameObject> polices = new List<GameObject>();
+    public GameObject PoliceParent;
+
+    // public GameObject lolxd;
+
     // Start is called before the first frame update
     void Start()
     {
+
         currentStamina = maxStamina;
-        LivingGround.SetActive(false);
+        //  LivingGround.SetActive(false);
 
         StartCoroutine(LivingOut());
         GainStaminaCo = StartCoroutine(GainStamina());
         isInLiving = false;
         interactable = new Interactions();
+
+        foreach (Transform Child in PoliceParent.transform)
+        {
+            polices.Add(Child.gameObject);
+
+        }
     }
 
     // Update is called once per frame
@@ -82,6 +95,10 @@ public class PlayerController : MonoBehaviour
                 StopCoroutine(GainStaminaCo);
                 DrainStaminaCo = StartCoroutine(DrainStamina(staminaDrainSpeed));
 
+                foreach (GameObject obj in polices)
+                {
+                    obj.GetComponent<NPC_Controller>().PosRandomisation();
+                }
             }
         }
         if (Input.GetKeyDown(KeyCode.R))
@@ -99,10 +116,13 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
+
     //    private void OnCollisionStay(UnityEngine.Collision other)
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Kohtaamisia");
+
         if (other.gameObject.CompareTag("OfficeDoor"))
         {
             //Kun kolaroidaan oveen
@@ -121,7 +141,12 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Human"))
         {
+
+            Debug.Log("Player Detected!");
             isDetected = true;
+            isRecentlyDetected = true;
+            // lolxd.GetComponent<NPC_Controller>().PlayerDetection();
+
 
         }
     }
@@ -146,6 +171,8 @@ public class PlayerController : MonoBehaviour
         {
             isDetected = false;
 
+
+            other.gameObject.GetComponent<NPC_Controller>().PosRandomisation();
         }
     }
 
@@ -153,8 +180,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator DeadIn()
     {
 
-        DeadGround.SetActive(true);
-        LivingGround.SetActive(false);
+        // DeadGround.SetActive(true);
+        // LivingGround.SetActive(false);
 
         DeadParent.SetActive(true);
 
@@ -229,8 +256,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator LivingIn()
     {
 
-        DeadGround.SetActive(false);
-        LivingGround.SetActive(true);
+        //  DeadGround.SetActive(false);
+        //  LivingGround.SetActive(true);
 
         LivingParent.SetActive(true);
 
