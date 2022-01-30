@@ -1,157 +1,83 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 19043.1466; Version 2009; 64bit' Language: 'fi' Physical Memory: 16293 MB
+OS: 'Windows 10 Pro; OS build 19042.1466; Version 2009; 64bit' Language: 'fi' Physical Memory: 16310 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-D:\Unity\2020.3.8f1\Editor\Unity.exe
+C:\unity\2020.3.8f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/KOULU/FGJ/Duality
+C:/Users/iidee/Desktop/Duality
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65467
-Successfully changed project path to: D:/KOULU/FGJ/Duality
-D:/KOULU/FGJ/Duality
+60410
+Successfully changed project path to: C:/Users/iidee/Desktop/Duality
+C:/Users/iidee/Desktop/Duality
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 21.52 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 29.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
-[Subsystems] Discovering subsystems at path D:/Unity/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/KOULU/FGJ/Duality/Assets
+[Subsystems] Discovering subsystems at path C:/unity/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/iidee/Desktop/Duality/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2080 (ID=0x1e87)
+    Renderer: NVIDIA GeForce GTX 1660 SUPER (ID=0x21c4)
     Vendor:   
-    VRAM:     8010 MB
-    Driver:   30.0.15.1123
+    VRAM:     5991 MB
+    Driver:   30.0.14.9649
 Initialize mono
-Mono path[0] = 'D:/Unity/2020.3.8f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'D:/Unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56048
+Mono path[0] = 'C:/unity/2020.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/unity/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56336
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001121 seconds.
+Register platform support module: C:/unity/2020.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/unity/2020.3.8f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: C:/unity/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002580 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 22.29 ms, found 0 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 26.55 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  7.788 seconds
+- Completed reload, in  1.632 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000766 seconds.
+Registered in 0.000765 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.726 seconds
+- Completed reload, in  0.730 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1392 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 84.2 MB.
 System memory in use after: 84.3 MB.
 
 Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1855.
-Total: 2.767100 ms (FindLiveObjects: 0.330800 ms CreateObjectMapping: 0.099500 ms MarkObjects: 2.207700 ms  DeleteObjects: 0.127300 ms)
+Total: 2.223800 ms (FindLiveObjects: 0.308800 ms CreateObjectMapping: 0.051200 ms MarkObjects: 1.730700 ms  DeleteObjects: 0.131600 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/CityLevel/NavMesh.asset
-  artifactKey: Guid(a70472b789819d64daa45624100e799c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/CityLevel/NavMesh.asset using Guid(a70472b789819d64daa45624100e799c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f7f4f8f08a40d4bf035767b87252a0') in 0.047900 seconds
-  Import took 0.049973 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000272 seconds.
-  path: Assets/Art/Human_Base.fbx
-  artifactKey: Guid(0bcbaa04a95e477438addb1ef2ed405d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Human_Base.fbx using Guid(0bcbaa04a95e477438addb1ef2ed405d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2bd2311d7b42ab6fe58aa121470d910') in 0.086978 seconds
-  Import took 0.089068 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000177 seconds.
-  path: Assets/Interior assets/wall02.fbx
-  artifactKey: Guid(880f5e1bffcc43a40b78ff072eec8370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Interior assets/wall02.fbx using Guid(880f5e1bffcc43a40b78ff072eec8370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb8649fe44decce2988642c1aac1398e') in 0.039676 seconds
-  Import took 0.041629 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Scenes/CityLevel.unity
-  artifactKey: Guid(24f1550714260794cada472755f805d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/CityLevel.unity using Guid(24f1550714260794cada472755f805d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5489688ca47c14532af86b4b3b0a4b4f') in 0.005377 seconds
-  Import took 0.007083 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/City_assets/main_building_U02.fbx
-  artifactKey: Guid(7d15cf428f8ca9e438556fb2beed883d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/City_assets/main_building_U02.fbx using Guid(7d15cf428f8ca9e438556fb2beed883d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a5d1035709eebaf6de316599bbbe00b') in 0.029712 seconds
-  Import took 0.031554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000291 seconds.
-  path: Assets/Interior assets/floor03.fbx
-  artifactKey: Guid(5f262e7f46a88cf4d96011c917734c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Interior assets/floor03.fbx using Guid(5f262e7f46a88cf4d96011c917734c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '526856f35a66cb4b32cc0e3f505f202a') in 0.015977 seconds
-  Import took 0.017719 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/City_assets/main_building01.fbx
-  artifactKey: Guid(d0f06ef390fb54d4193b7412b62feb11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/City_assets/main_building01.fbx using Guid(d0f06ef390fb54d4193b7412b62feb11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c6f8004d5e1f00c5e4279b58eac9dd9') in 0.028373 seconds
-  Import took 0.030193 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Interior assets/floor01.fbx
-  artifactKey: Guid(c265b0db6cd072d469d455ec405ff403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Interior assets/floor01.fbx using Guid(c265b0db6cd072d469d455ec405ff403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14031447dd80edef8e3d704d857bd64d') in 0.019770 seconds
-  Import took 0.021559 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000248 seconds.
-  path: Assets/Scenes/City_level_updated.unity
-  artifactKey: Guid(b8bbf2ffcfdc7bd40992356189c49d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/City_level_updated.unity using Guid(b8bbf2ffcfdc7bd40992356189c49d22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d76bfd1d7f639b85299e42e76b97e8e') in 0.005141 seconds
-  Import took 0.007122 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/Interior assets/wall01.fbx
-  artifactKey: Guid(64f9ed798e0f75841b9746f4662ceedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Interior assets/wall01.fbx using Guid(64f9ed798e0f75841b9746f4662ceedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfdaac17e6a15de32172d377ce7d335e') in 0.017753 seconds
-  Import took 0.019749 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000190 seconds.
-  path: Assets/Interior assets/floor3.fbx
-  artifactKey: Guid(ce89065e1e8cb824d858c378fb939b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Interior assets/floor3.fbx using Guid(ce89065e1e8cb824d858c378fb939b31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a417926148836791cff540b724ac614d') in 0.015607 seconds
-  Import took 0.017378 seconds .
+  path: Assets/Scenes/MainMenu.unity
+  artifactKey: Guid(85c0c56f1b452494d948dc5f912de768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenu.unity using Guid(85c0c56f1b452494d948dc5f912de768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6158c05d161c217701ddff9155a7967c') in 0.012982 seconds
+  Import took 0.015741 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
