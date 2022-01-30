@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Goal
   - NPC
+  - WillPaper
+  - OfficeDoor
+  - Human
+  - PlayerSphere
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - PostProcessing
   - 
   - 
   - 

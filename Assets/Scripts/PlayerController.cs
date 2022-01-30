@@ -7,9 +7,13 @@ public class PlayerController : MonoBehaviour
 {
 
     public float movementSpeed = 5;
+    public float RotateSpeed = 50f;
     public float maxStamina = 10;
-    public float staminaDrainedPerSec = 1;
-    public float staminaGainedPerSec = 1;
+    public float staminaDrainSpeed = 1;
+    public float staminaDrainMultiplier = 1.2f;
+    public float staminaGainSpeed = 1;
+    public Interactions interactable;
+
     [Header("Fade Settings")]
     public float fadeSpeed = 1f;
     public float fadeWaitSec = 1f;
@@ -19,31 +23,65 @@ public class PlayerController : MonoBehaviour
     public Material DeadOpaqueMat;
     public Material LivingTransparentMat;
     public Material DeadTransparentMat;
-    public GameObject LivingGround;
-    public GameObject DeadGround;
+    // public GameObject LivingGround;
+    //  public GameObject DeadGround;
 
     private bool isInLiving;
     private Coroutine DrainStaminaCo;
+    private Coroutine GainStaminaCo;
     private bool isDrainCoRunning = false;
+    private bool isGainCoRunning;
     private float currentStamina;
+    public bool isDetected = false;
+    public bool isRecentlyDetected = false;
+
+    private bool hasDoorCollision;
+    private bool hasPaperCollision;
+
+    private List<GameObject> polices = new List<GameObject>();
+    public GameObject PoliceParent;
+
+    // public GameObject lolxd;
+
     // Start is called before the first frame update
     void Start()
     {
+
         currentStamina = maxStamina;
-        StartCoroutine(DeadOut());
-        isInLiving = true;
+        //  LivingGround.SetActive(false);
+
+        StartCoroutine(LivingOut());
+        GainStaminaCo = StartCoroutine(GainStamina());
+        isInLiving = false;
+        interactable = new Interactions();
+
+        foreach (Transform Child in PoliceParent.transform)
+        {
+            polices.Add(Child.gameObject);
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Moving();
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isInLiving)
             {
                 StartCoroutine(DeadIn());
                 StartCoroutine(LivingOut());
+
+                isDrainCoRunning = false;
+                isGainCoRunning = true;
+                isDetected = false;
+
+                Debug.Log("About to stop drain");
+                StopCoroutine(DrainStaminaCo);
+                Debug.Log("About to gain");
+                GainStaminaCo = StartCoroutine(GainStamina());
 
             }
             if (!isInLiving)
@@ -51,24 +89,90 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(LivingIn());
                 StartCoroutine(DeadOut());
 
+                isDrainCoRunning = true;
+                isGainCoRunning = false;
+
+                StopCoroutine(GainStaminaCo);
+                DrainStaminaCo = StartCoroutine(DrainStamina(staminaDrainSpeed));
+
+                foreach (GameObject obj in polices)
+                {
+                    obj.GetComponent<NPC_Controller>().PosRandomisation();
+                }
             }
         }
-
-        if (isInLiving)
+        if (Input.GetKeyDown(KeyCode.R))
         {
+            //Tarkista tagi, kutsu sen mukaista funktiota, asuvat interactable
+            if (hasDoorCollision)
+            {
+                interactable.DoorInteraction();
+            }
 
-            DrainStaminaCo = StartCoroutine(DrainStamina());
+            if (hasPaperCollision)
+            {
+                interactable.PaperInteraction();
+            }
+
         }
+    }
 
-        if (Input.GetKey(KeyCode.K))
+
+    //    private void OnCollisionStay(UnityEngine.Collision other)
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Kohtaamisia");
+
+        if (other.gameObject.CompareTag("OfficeDoor"))
         {
-            StartCoroutine(DeadIn());
-            StartCoroutine(LivingOut());
+            //Kun kolaroidaan oveen
+            Debug.Log("You enter doors sphere of influence...");
+            hasDoorCollision = true;
+
+
         }
-        if (Input.GetKey(KeyCode.L))
+        if (other.gameObject.CompareTag("WillPaper"))
         {
-            StartCoroutine(LivingIn());
-            StartCoroutine(DeadOut());
+            // Kun kolaroidaan testamenttiin.
+            Debug.Log("You enter papers sphere of influence...");
+
+            hasPaperCollision = true;
+
+        }
+        if (other.gameObject.CompareTag("Human"))
+        {
+
+            Debug.Log("Player Detected!");
+            isDetected = true;
+            isRecentlyDetected = true;
+            // lolxd.GetComponent<NPC_Controller>().PlayerDetection();
+
+
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "OfficeDoor")
+        {
+            //Kun poistutaan ovelta
+            Debug.Log("You leave doors sphere of influence...");
+            hasDoorCollision = false;
+
+        }
+        if (other.gameObject.tag == "WillPaper")
+        {
+            // Kun poistutaan testamentiltä.
+            Debug.Log("You leave papers sphere of influence...");
+            hasPaperCollision = false;
+
+        }
+        if (other.gameObject.CompareTag("Human"))
+        {
+            isDetected = false;
+
+
+            other.gameObject.GetComponent<NPC_Controller>().PosRandomisation();
         }
     }
 
@@ -76,8 +180,8 @@ public class PlayerController : MonoBehaviour
     IEnumerator DeadIn()
     {
 
-        DeadGround.SetActive(true);
-        LivingGround.SetActive(false);
+        // DeadGround.SetActive(true);
+        // LivingGround.SetActive(false);
 
         DeadParent.SetActive(true);
 
@@ -98,7 +202,7 @@ public class PlayerController : MonoBehaviour
             }
             yield return new WaitForSeconds(fadeWaitSec);
         }
-        
+
 
         //change the material to opaque for shadows
         foreach (Renderer rend in renderers)
@@ -139,21 +243,21 @@ public class PlayerController : MonoBehaviour
         }
         LivingParent.SetActive(false);
         isInLiving = false;
-        if (isDrainCoRunning)
-        {
-            print("Stopping drain");
-            StopCoroutine(DrainStaminaCo);
-        }
-        
-        StartCoroutine(GainStamina());
     }
+    /*    if (!isDrainCoRunning)
+    //    {
+    //        Debug.Log("STOPPP drain");
+    //        StopCoroutine(DrainStaminaCo);
+    //    }
+
+    //    GainStaminaCo = StartCoroutine(GainStamina());*/
 
     //Fade the Living in
     IEnumerator LivingIn()
     {
 
-        DeadGround.SetActive(false);
-        LivingGround.SetActive(true);
+        //  DeadGround.SetActive(false);
+        //  LivingGround.SetActive(true);
 
         LivingParent.SetActive(true);
 
@@ -232,41 +336,113 @@ public class PlayerController : MonoBehaviour
         {
             transform.Translate(Vector3.right * Time.deltaTime * movementSpeed);
         }
+
+        if (Input.GetKey(KeyCode.Q))
+            transform.Rotate(-Vector3.up * RotateSpeed * Time.deltaTime);
+        else if (Input.GetKey(KeyCode.E))
+            transform.Rotate(Vector3.up * RotateSpeed * Time.deltaTime);
+
+    }
+    IEnumerator DrainStamina(float drainSpd)
+    {
+
+        while (currentStamina > 0)
+        {
+            if (isDrainCoRunning)
+            {
+                //If detected, kertoimella, else
+                if (isDetected)
+                {
+                    drainSpd = drainSpd * staminaDrainMultiplier;
+                }
+                currentStamina = currentStamina - (drainSpd * Time.deltaTime);
+
+                if (currentStamina <= 0)
+                {
+
+                    Debug.Log("RAN OUT of Stm");
+                    currentStamina = 0;
+
+                    StartCoroutine(DeadIn());
+                    StartCoroutine(LivingOut());
+
+                    isDrainCoRunning = false;
+                    isGainCoRunning = true;
+                    StopCoroutine(DrainStaminaCo);
+                    GainStaminaCo = StartCoroutine(GainStamina());
+                    yield return null;
+
+                    //break;
+                }
+                Debug.Log("-Stamina-: " + currentStamina);
+                yield return new WaitForSeconds(1);
+            }
+        }
+        yield return null;
+
     }
 
     IEnumerator GainStamina()
     {
-        print("Starting gain");
-        if (currentStamina < maxStamina)
+        Debug.Log("Starting Gain");
+        if (currentStamina >= maxStamina)
         {
-            currentStamina = currentStamina + (staminaGainedPerSec * Time.deltaTime);
-            //Debug.Log("Stamina+: " + currentStamina);
-            yield return new WaitForSeconds(1);
-        }
-        else
-            yield return null;
-    }
-
-    IEnumerator DrainStamina()
-    {
-        isDrainCoRunning = true;
-        if (currentStamina <= 0)
-        {
-            print("Ran out of Stm");
-            isDrainCoRunning = false;
-            StartCoroutine(DeadIn());
-            StartCoroutine(LivingOut());
+            Debug.Log("MaxStm");
+            currentStamina = maxStamina;
+            //  StopCoroutine(GainStaminaCo);
+            // isGainCoRunning = false;
             yield return null;
         }
-        else
+        else if (currentStamina < maxStamina)
         {
-            while (currentStamina > 0)
-            {
-                currentStamina = currentStamina - (staminaDrainedPerSec * Time.deltaTime);
-                //Debug.Log("Stamina-: " + currentStamina);
-                yield return new WaitForSeconds(1);
-
-            }
+            yield return new WaitForSeconds(5);
+            currentStamina = maxStamina;
+            //currentStamina = currentStamina + (staminaGainSpeed * Time.deltaTime);
+            Debug.Log("+Stamina+: " + currentStamina);
         }
+        else
+            Debug.Log("hajos lol xd");
+
     }
+
+    /*   Vanha DrainStamina
+     *   isDrainCoRunning = true;
+    //    if (currentStamina <= 0)
+    //    {
+    //        Debug.Log("RAN OUT of Stm");
+    //        StopCoroutine(DrainStaminaCo);
+    //        isDrainCoRunning = false;
+    //        StartCoroutine(DeadIn());
+    //        StartCoroutine(LivingOut());
+    //        yield return null;
+    //    }
+    //    else
+    //    {
+    //        while (currentStamina > 0)
+    //        {
+    //            currentStamina = currentStamina - (staminaDrainSpeed * Time.deltaTime);
+    //            Debug.Log("Stamina-: " + currentStamina);
+    //            yield return new WaitForSeconds(1);
+
+    //        }
+          }*/
+
+    /* Vanha GainStamina
+     * Debug.Log("Starting gain");
+    //    if (currentStamina >= maxStamina)
+    //    {
+    //        currentStamina = maxStamina;
+    //        StopCoroutine(GainStaminaCo);
+    //        yield return null;
+    //    }
+    //    else
+    //    {
+    //        while (currentStamina < maxStamina)
+    //        {
+    //            currentStamina = currentStamina + (staminaGainSpeed * Time.deltaTime);
+    //            Debug.Log("Stamina+: " + currentStamina);
+    //            yield return new WaitForSeconds(1);
+    //        }
+         }*/
+
 }
