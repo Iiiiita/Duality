@@ -46,7 +46,7 @@ public class NPC_Controller : MonoBehaviour
         }
         if (playerGO.GetComponent<PlayerController>().isDetected == true && playerGO.GetComponent<PlayerController>().isRecentlyDetected == true)
         {
-            audioSource.Pause();
+          //  audioSource.Pause();
             PlayerDetection();
             playerGO.GetComponent<PlayerController>().isRecentlyDetected = false;
         }
@@ -91,7 +91,7 @@ public class NPC_Controller : MonoBehaviour
             currentDistanceToPlayer = Vector3.Distance(playerPos.position, agent.transform.position);
             if (currentDistanceToPlayer >= goalDistanceToPlayer)
             {
-                audioSource.PlayOneShot(screamSound);
+               // audioSource.PlayOneShot(screamSound);
                 agent.speed = 8;
                 Debug.Log("Speedin'");
             }
